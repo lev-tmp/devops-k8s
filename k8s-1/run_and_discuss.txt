@@ -1,0 +1,15 @@
+Cluster components
+==================
+
+
+kubectl get namespaces
+
+kubectl get pods --namespace=kube-system
+
+kubectl get deployments --namespace=kube-system
+
+kubectl get daemonset --namespace=kube-system
+
+kubectl get services --namespace=kube-system
+
+* Use : kubectl describe , to investingate more about this objects !
