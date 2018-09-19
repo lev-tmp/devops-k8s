@@ -10,7 +10,7 @@ spec:
         requests:
           cpu: "300m"
           memory: "256Mi"
-      port:
+      ports:
         - containerPort: 8080
           name: http
           protocol: TCP
