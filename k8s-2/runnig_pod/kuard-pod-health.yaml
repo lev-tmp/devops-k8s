@@ -1,9 +1,9 @@
-apiVearion: v1
+apiVersion: v1
 kind: Pod
-metada:
+metadata:
   name: kuard
 spec:
-  container:
+  containers:
     - image: gcr.io/kuard-demo/kuard-amd64:1
       name: kuard
       livenessProbe:
