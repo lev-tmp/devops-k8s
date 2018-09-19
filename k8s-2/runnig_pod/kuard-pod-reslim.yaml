@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: kuard
-  spec:
-    containers:
-      - image: gcr.io/kuar-demo/kuard-amd:1
-        name: kuard
-        resources:
-          requests:
-            cpu: "300m"
-            memory: "256Mi"
-        port:
-          - containerPort: 8080
-            name: http
-            protocol: TCP
+spec:
+  containers:
+    - image: gcr.io/kuar-demo/kuard-amd:1
+      name: kuard
+      resources:
+        requests:
+          cpu: "300m"
+          memory: "256Mi"
+      port:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
