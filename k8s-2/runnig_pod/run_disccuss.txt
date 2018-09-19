@@ -5,7 +5,10 @@ kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:1
 kubectl get pods
 
 kubectl delete deployments/kuard
-==
+
+==Labele app=kuard for pod kuard ==
+
+kubectl label pod kuard "app=kuard"
 
 ==Creating Pod with replica==
 
