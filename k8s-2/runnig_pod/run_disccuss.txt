@@ -1,0 +1,26 @@
+==Creating a Pod (deployment)==
+
+kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:1
+
+kubectl get pods
+
+kubectl delete deployments/kuard
+==
+
+==Creating Pod with replica==
+
+
+kubectl run alpaca-prod --image=gcr.io/kuar-demo/kuard-amd64:1 --replicas=3 --port=8080 --labels="ver=1,app=alpaca,env=prod"
+
+kubectl expose deployment alpaca-prod
+
+==Pod with health check==
+
+kubectl apply -f kuard-pod-health.yaml
+
+kubectl label pods kuard "app=kuard"
+
+kubectl expose pod kuard -l app=kuard --target-port=8080 --port=80 --type=LoadBalancer
+
+kubectl get service kuard -o yaml
+
