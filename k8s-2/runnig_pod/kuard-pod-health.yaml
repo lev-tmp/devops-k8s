@@ -6,7 +6,7 @@ spec:
   container:
     - image: gcr.io/kuard-demo/kuard-amd64:1
       name: kuard
-      livnessProbe:
+      livenessProbe:
         httpGet:
           path: /healthy
           port: 8080
